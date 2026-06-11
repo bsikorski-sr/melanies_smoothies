@@ -7,6 +7,9 @@ from snowflake.snowpark.functions import when_matched
 
 conn = st.connection("snowflake", ttl=os.getenv("SNOWFLAKE_CONNECTION_TTL"))
 session = conn.session()
+cnx = st.connection("snowflake")
+session = cnx.session()
+
 
 st.title("Customize Your Smoothie :smile:")
 st.write("Pick the fruit you want in your custom smoothie")
